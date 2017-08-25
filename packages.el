@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst baileys-packages
-  ()
+  '(solarized-theme)
   "The list of Lisp packages required by the baileys layer.
 
 Each entry is either:
@@ -57,5 +57,10 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+
+(defun baileys/post-init-solarized-theme ()
+  (message "baileys: post-init-solarized-theme")
+  (baileys/auto-colour))
+
 
 ;;; packages.el ends here

@@ -4,8 +4,9 @@
 (setq vc-follow-symlinks t)
 (setq vc-suppress-confirm t)
 
-(setq-local global-hl-line-mode 0)
 (global-linum-mode t)
+(setq-local global-hl-line-mode 0)
+(setq-default smartparens-strict-mode t)
 
 (setq-default helm-make-build-dir "build")
 (setq-default make-backup-files nil)
