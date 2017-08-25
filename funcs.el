@@ -37,12 +37,10 @@
   "Automatically load the appropiate colour scheme based
    on your horoscope, geophysical conditions, and day/night cycles."
   (interactive)
-  (baileys/light)
+  (baileys/dark)
 
   (message (read-colour))
   ;; (setq (colour-file "~/.colour-theme"))
-
-
 
 
   ;; (message (concat "baileys: loading theme file: " colour-file))
@@ -54,7 +52,3 @@
 (defun baileys/init ()
   (baileys/auto-colour)
   (message "baileys: initialised"))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Kick things off!
-(baileys/init)
