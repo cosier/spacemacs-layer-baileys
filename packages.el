@@ -58,28 +58,4 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
-(defun baileys/dark ()
-  "Let's go dark!"
-  (interactive)
-  (set-terminal-parameter nil 'background-mode 'dark)
-  (set-frame-parameter nil 'background-mode 'dark)
-  (spacemacs/load-theme 'solarized))
-
-(defun baileys/light ()
-  "Let's go light!"
-  (interactive)
-  (set-terminal-parameter nil 'background-mode 'light)
-  (set-frame-parameter nil 'background-mode 'light)
-  (spacemacs/load-theme 'solarized))
-
-(defun baileys/pre-init ()
-  (message "Baileys: pre-init")
-  (baileys/dark))
-
-(defun baileys/init ()
-  (message "Baileys: init!"))
-
-(defun baileys/post-init ()
-  (message "Baileys: post init!"))
-
 ;;; packages.el ends here
