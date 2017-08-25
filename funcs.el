@@ -37,15 +37,9 @@
   "Automatically load the appropiate colour scheme based
    on your horoscope, geophysical conditions, and day/night cycles."
   (interactive)
-  (baileys/dark)
 
-  (message (read-colour))
-  ;; (setq (colour-file "~/.colour-theme"))
-
-
-  ;; (message (concat "baileys: loading theme file: " colour-file))
-
-  )
+  (if (string= "dark\n" (read-colour)) (baileys/dark) (baileys/light))
+  (message (concat "baileys: detected colour " (read-colour))))
 
 ;; Master initialisation functor
 
