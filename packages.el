@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst baileys-packages
-  '()
+  ()
   "The list of Lisp packages required by the baileys layer.
 
 Each entry is either:
@@ -57,31 +57,29 @@ Each entry is either:
 
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
-(message "Baileys here we go!")
+
+(defun baileys/dark ()
+  "Let's go dark!"
+  (interactive)
+  (set-terminal-parameter nil 'background-mode 'dark)
+  (set-frame-parameter nil 'background-mode 'dark)
+  (spacemacs/load-theme 'solarized))
+
+(defun baileys/light ()
+  "Let's go light!"
+  (interactive)
+  (set-terminal-parameter nil 'background-mode 'light)
+  (set-frame-parameter nil 'background-mode 'light)
+  (spacemacs/load-theme 'solarized))
+
 (defun baileys/pre-init ()
-  (message "Welcome to baileys layer!")
-  (baileys/dark 1)
-  )
+  (message "Baileys: pre-init")
+  (baileys/dark))
 
 (defun baileys/init ()
-  (message "Welcome to baileys layer!"))
+  (message "Baileys: init!"))
 
 (defun baileys/post-init ()
-  (message "Welcome to baileys layer!"))
-
- (defun baileys/dark ()
-   (interactive "Set the theme to Dark!")
-   (set-terminal-parameter nil 'background-mode 'dark)
-   (set-frame-parameter nil 'background-mode 'dark)
-   (spacemacs/load-theme 'solarized')
-   
-   )
-
- (defun baileys/light ()
-   (interactive "Set the theme to Light!")
-   (set-terminal-parameter nil 'background-mode 'light)
-   (set-frame-parameter nil 'background-mode 'light)
-   (spacemacs/load-theme 'solarized')
-   )
+  (message "Baileys: post init!"))
 
 ;;; packages.el ends here
