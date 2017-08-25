@@ -6,7 +6,7 @@
 
 (global-linum-mode t)
 (setq-local global-hl-line-mode 0)
-(setq-default smartparens-strict-mode t)
+(setq-default smartparens-strict-mode nil)
 
 (setq-default helm-make-build-dir "build")
 (setq-default make-backup-files nil)
