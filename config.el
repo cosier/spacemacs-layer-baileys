@@ -13,10 +13,13 @@
 
 (setq cmake-ide-build-dir "/Users/bailey/Developer/work/midi-mapper/build")
 
-(defun my-c-mode-common-hook ()
+(defun baileys-c-mode-common-hook ()
+  (message "bailey-c-mode-common-hook: go!")
+  (setq c-default-style "linux"
+        c-basic-offset 4)
   (setq flycheck-clang-include-path (list "..")))
 
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+(add-hook 'c-mode-common-hook 'baileys-c-mode-common-hook)
 
 (add-hook 'c++-mode-hook
           (lambda () (setq flycheck-clang-include-path
