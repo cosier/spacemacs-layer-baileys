@@ -41,6 +41,18 @@
   (if (string= "dark\n" (read-colour)) (baileys/dark) (baileys/light))
   (message (concat "baileys: detected colour " (read-colour))))
 
+(defun baileys/clang-format-buffer-smart ()
+  "Reformat buffer if .clang-format exists in the projectile root."
+  (when (f-exists? (expand-file-name ".clang-format" (projectile-project-root)))
+    (clang-format-buffer)))
+
+(defun baileys/clang-format-buffer-smart-on-save ()
+  "Add auto-save hook for clang-format-buffer-smart."
+  (add-hook 'before-save-hook 'baileys/clang-format-buffer-smart nil t))
+
+(spacemacs/add-to-hooks 'baileys/clang-format-buffer-smart-on-save
+                        '(c-mode-hook c++-mode-hook))
+
 ;; Master initialisation functor
 
 (defun baileys/init ()
