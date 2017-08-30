@@ -46,6 +46,13 @@
   (when (f-exists? (expand-file-name ".clang-format" (projectile-project-root)))
     (clang-format-buffer)))
 
+(defun baileys/open-related ()
+  "Open related include header"
+  (interactive)
+  (message "baileys: opening related file")
+  (ggtags-find-tag-dwim))
+
+
 (defun baileys/clang-format-buffer-smart-on-save ()
   "Add auto-save hook for clang-format-buffer-smart."
   (add-hook 'before-save-hook 'baileys/clang-format-buffer-smart nil t))

@@ -62,5 +62,20 @@ Each entry is either:
   (message "baileys: init-color-theme-solarized")
   (baileys/auto-colour))
 
+(defun baileys/post-init-ggtags ()
+  (message ("baileys: init-ggtags")))
+
+(defun baileys/post-init-helm-gtags ()
+  (message ("baileys: init-helm-gtags"))
+  (setq
+    helm-gtags-ignore-case t
+    helm-gtags-auto-update t
+    helm-gtags-use-input-at-cursor t
+    helm-gtags-pulse-at-cursor t
+    helm-gtags-prefix-key "\C-cg"
+    helm-gtags-suggested-key-mapping t)
+
+  )
+
 
 ;;; packages.el ends here

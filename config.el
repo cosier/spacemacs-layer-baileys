@@ -1,6 +1,7 @@
 ;; baileys/config.el
 ;; baileys configuration
 
+(setq make-backup-files nil)
 (setq vc-follow-symlinks t)
 (setq vc-suppress-confirm t)
 
@@ -18,6 +19,9 @@
   (setq c-default-style "linux"
         c-basic-offset 4)
   (setq flycheck-clang-include-path (list "..")))
+
+(add-hook 'c-mode-hook (lambda () (setq comment-start "//"
+                                        comment-end   "")))
 
 (add-hook 'c-mode-common-hook 'baileys-c-mode-common-hook)
 
