@@ -16,8 +16,8 @@
 (defun baileys-c-mode-common-hook ()
   (message "bailey-c-mode-common-hook: go!")
   (setq c-default-style "linux"
-        c-basic-offset 4)
-  
+        c-basic-offset 4))
+
 (defun my-c-mode-common-hook ()
   (setq flycheck-clang-include-path (list "..")))
 
