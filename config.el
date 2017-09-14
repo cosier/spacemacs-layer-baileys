@@ -12,12 +12,13 @@
 (setq-default helm-make-build-dir "build")
 (setq-default make-backup-files nil)
 
-(setq cmake-ide-build-dir "/Users/bailey/Developer/work/midi-mapper/build")
 
 (defun baileys-c-mode-common-hook ()
   (message "bailey-c-mode-common-hook: go!")
   (setq c-default-style "linux"
         c-basic-offset 4)
+  
+(defun my-c-mode-common-hook ()
   (setq flycheck-clang-include-path (list "..")))
 
 (add-hook 'c-mode-hook (lambda () (setq comment-start "//"
