@@ -37,7 +37,7 @@
   "Automatically load the appropiate colour scheme based
    on your horoscope, geophysical conditions, and day/night cycles."
   (interactive)
-  ;; (if (string= "light\n" (read-colour)) (baileys/light) (baileys/dark))
+  (if (string= "light\n" (read-colour)) (baileys/light) (baileys/dark))
   (message (concat "baileys: detected colour " (read-colour))))
 
 (defun baileys/clang-format-buffer-smart ()
@@ -62,5 +62,5 @@
 ;; Master initialisation functor
 
 (defun baileys/init ()
-  ; (baileys/auto-colour)
+  (baileys/auto-colour)
   (message "baileys: initialised"))
