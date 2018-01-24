@@ -28,6 +28,7 @@
   (setq-local web-mode-markup-indent-offset n) ; web-mode, html tag in html file
   (setq-local web-mode-sql-indent-offset n) ; web-mode
   (setq-local web-mode-attr-value-indent-offset n) ; web-mode
+  (setq-local web-mode-markup-indent-offset n) ; web-mode
   (setq-local css-indent-offset n) ; css-mode
   (setq-local sh-basic-offset n) ; shell scripts
   (setq-local sh-indentation n))

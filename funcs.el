@@ -62,5 +62,5 @@
 ;; Master initialisation functor
 
 (defun baileys/init ()
-  ; (baileys/auto-colour)
+  (baileys/auto-colour)
   (message "baileys: initialised"))
