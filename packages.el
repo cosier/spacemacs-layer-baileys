@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst baileys-packages
-  '(color-theme-solarized)
+  '()
   "The list of Lisp packages required by the baileys layer.
 
 Each entry is either:
