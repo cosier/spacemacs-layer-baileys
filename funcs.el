@@ -33,7 +33,9 @@
   (interactive)
   (set-terminal-parameter nil 'background-mode 'dark)
   (set-frame-parameter nil 'background-mode 'dark)
-  (spacemacs/load-theme 'solarized t)
+  (spacemacs/load-theme 'spacemacs-dark t)
+  (set-background-color "#000000")
+
   (message "baileys: dark mode activated!"))
 
 (defun baileys/light ()
@@ -41,7 +43,7 @@
   (interactive)
   (set-terminal-parameter nil 'background-mode 'light)
   (set-frame-parameter nil 'background-mode 'light)
-  (spacemacs/load-theme 'solarized t)
+  (spacemacs/load-theme 'spacemacs-light t)
   (message "baileys: light mode activated!"))
 
 (defun read-colour ()
